@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WorkController!
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			{% for rea in realisations %}
+				<div class="col-lg-6">
+					<div class="card">
+						<h1>{{ rea.titre}}</h1>
+						<h3>{{ rea.texte }}</h3>
+						{% for reaimg in rea.imageChantier %}
+							<img src="/images/chantiers/{{reaimg.nom}}" class="test" alt="">
+
+						{% endfor %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

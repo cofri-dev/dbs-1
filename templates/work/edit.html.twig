@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WorkController!
+{% endblock %}
+
+{% block body %}
+
+	{{ form_start(form_chantier) }}
+	{{ form_widget(form_chantier) }}
+	<button type="submit">Confirmer</button>
+	{{ form_end(form_chantier) }}
+	{% for images in oldImage %}
+		<img src="/images/chantiers/{{images.nom}}" class="test" alt="">
+		<a href="{{ path('app_admin_delete_image', {'id': images.id})}}" class="btn btn-danger">Supprimer</a>
+
+
+	{% endfor %}
+
+{% endblock %}

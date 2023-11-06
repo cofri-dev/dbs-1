@@ -1,0 +1,123 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+	{% include 'partials/nav.html.twig' %}
+	<section class="about">
+		<div
+			class="column-left">
+			{# <img src="images/front/amenagement.jpg" alt=""> #}
+			<img src=" {{ asset('images/front/amenagement.jpg') }}" alt="">
+		</div>
+		<div class="column-right">
+			<div class="content">
+				<div class="title">
+					<h2>A propos de l'entreprise</h2>
+				</div>
+				<div class="separator">
+					<div class="separator-left"></div>
+					<div class="separator-right"></div>
+				</div>
+				<div class="description">
+					<p>L'entreprise DBS maçonnerie est à votre disposition pour vous accompagner dans vos projet.Notre entreprise est spéialisé dans la rénovation, la réparation en maçonnerie.</p>
+					<p>Nous proposont aussi la création d'ouverture, la pose de carrelage, le ravalement de façade, agrandissement, aménagement extérieur (entrée, portail,clôture, allée etc..)</p>
+					<p>Nos devis sont détaillées, gratuits et sans engagements.
+						<br>La garantie d'un travail propore et soigné, dans ls règles de l'art.</p>
+					<div class="mosaique">
+						<div class="mosaique-top-left">
+							<div class="mosaique-icon-top-left">
+								<i class="fa-solid fa-building fa-2x" style="color: #ff9302;"></i>
+							</div>
+							<div class="mosaique-text-top-left">
+								<h4>Extérieur</h4>
+								<p>Nous proposont des prestations d'aménagement extérieur comme entrée de portail, cloôture, allée etc..</p>
+							</div>
+						</div>
+						<div class="mosaique-top-right">
+							<div class="mosaique-icon-top-right">
+								<i class="fa-solid fa-house-medical-circle-check fa-2x" style="color: #ff9302;"></i>
+							</div>
+							<div class="mosaique-text-top-right">
+								<h4>Intérieur</h4>
+								<p>Nous proposont des prestations de pose de carrelage, création d'ouverture, neuf</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="realisations">
+		<div class="title title-realisation">
+			<h2>Dernières réalisations</h2>
+		</div>
+		<div class="separator separator-realisation">
+			<div class="separator-left"></div>
+			<div class="separator-right"></div>
+		</div>
+		<div
+			class="last-project ">
+			{# owl-carousel owl-theme slide #}
+			{% for r in realisations %}
+				<div class="works">
+					<div class="card-images">
+						<div class="card-left">
+							<h4>{{ r.titre }}</h4>
+							<h5>{{ r.dateChantier|date("d/m/Y") }}</h5>
+							<p>{{ r.texte }}</p>
+							<a href="#">
+								<i class="fa-solid fa-plus" style="color: #fff;"></i>
+								<span>En savoir plus</span>
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<section class="gallery">
+		<div class="title title-realisation">
+			<h2>Gallerie des chantiers</h2>
+		</div>
+		<div class="separator separator-realisation">
+			<div class="separator-left"></div>
+			<div class="separator-right"></div>
+		</div>
+		<div>
+			{% for img in images %}
+				<img src="images/chantiers/{{img.nom}}" class="image-size" alt="images chantiers">
+			{% endfor %}
+		</div>
+	</section>
+	<section class="skills">
+		<div class="title title-realisation">
+			<h2>Mes compétences</h2>
+		</div>
+		<div class="separator separator-realisation">
+			<div class="separator-left"></div>
+			<div class="separator-right"></div>
+		</div>
+		<div class="skills-column">
+			<div class="skills-left">
+				<h4>Démolition</h4>
+				<h4>Maçonnerie générale</h4>
+				<h4>Parpaing</h4>
+				<h4>Brique</h4>
+				<h4>Enduit</h4>
+				<h4>Dalle béton</h4>
+				<h4>Carrelage</h4>
+			</div>
+			<div class="skills-right">
+				<h4>Térassement</h4>
+				<h4>Clôture</h4>
+				<h4>Création d'ouverture</h4>
+				<h4>Maçonnerie de pierre</h4>
+				<h4>Aménagement extérieur</h4>
+				<h4>Neuf</h4>
+				<h4>Rénovation</h4>
+			</div>
+		</div>
+	</section>
+{% endblock %}

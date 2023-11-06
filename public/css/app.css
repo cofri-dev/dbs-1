@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Roboto:wght@100;700&display=swap');
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+/****************************** HEADER ****************************** */
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/front/fond.jpg);
+    background-size: cover;
+    
+}
+
+/****************************** NAV ****************************** */
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+}
+
+nav div.logo{
+    width: 30%;
+}
+
+nav div.navigation{
+    width: 70%;
+    justify-content: flex-end;
+}
+
+nav img{
+    height: 100px;
+    width: 200px;
+    padding: 20px 0 10px 150px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+    
+}
+
+nav ul li{
+    list-style-type: none;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+nav ul li a{
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#5A5D52;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav ul li a:hover{
+    color: #FF9302;
+
+    transition: all 0.3s ease-in-out;
+}
+
+div.separator{
+    display: flex;
+    align-items: center;
+}
+
+div.separator-left{
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #2d3239;
+}
+
+div.separator-right{
+    width: 150px;
+    height: 3px;
+    background-color: #FF9302;
+    margin-left: 15px;
+}
+
+/****************************** ABOUT ****************************** */
+
+section.about{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+section.about div.column-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.about div.column-left img{
+    height: 500px;
+    width: 400px;
+    -webkit-box-shadow: -14px 14px 0px 4px #ff910270; 
+    box-shadow: -14px 14px 0px 4px #ff910270;
+}
+
+section.about div.column-right{
+    width: 50%;
+    height: 100%;
+}
+
+section.about div.column-right div.content{
+    padding-top: 80px;
+    width: 80%;
+}
+div.title h2{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+section.about div.column-right div.content div.description p{
+    color: #767676;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+section.about div.column-right div.content div.description p:nth-child(1){
+    padding-top: 25px;
+}
+
+section.about div.column-right div.content div.description p:nth-child(3){
+    color: #FF9302;
+    font-weight: 700;
+    padding-top: 50px;
+}
+
+.mosaique{
+    display: flex;
+    padding-top: 25px;
+}
+
+.mosaique-top-left, .mosaique-top-right{
+    display: flex;
+    padding-top: 25px;
+}
+
+.mosaique-icon-top-left, .mosaique-icon-top-right{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.mosaique-text-top-left, .mosaique-text-top-right{
+    padding-left: 20px;
+    width: 50%;
+}
+
+.mosaique-text-top-left h4, .mosaique-text-top-right h4{
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/****************************** WORK ****************************** */
+
+section.realisations{
+    width: 95%;
+    height: auto;
+    margin-top: 100px;
+    background-color: #f7f7f7;
+    padding: 50px;
+}
+
+div.title-realisation{
+    padding-top: 25px;
+}
+
+div.title-realisation, div.separator-realisation, .skills-column{
+    padding-left: 100px;
+}
+
+div.separator-realisation{
+    padding-bottom: 50px;
+}
+
+section.realisations div.last-project img.image-size{
+    height: 400px;
+    width: 400px;
+    margin: 25px;
+    -webkit-box-shadow: 14px 14px 0px 4px #ff910270; 
+    box-shadow: 14px 14px 0px 4px #ff910236;
+}
+
+div.works{
+    display: flex;
+    border-right: 5px #FF9302 solid;
+    border-left: 5px #ff910236 solid;
+    margin-top: 10px;
+}
+
+div.card-left{
+    padding: 25px;
+    width: 65%;
+
+}
+
+div.card-left h4{
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+div.card-left h5{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    color: #FF9302;
+    margin-top: 0;
+}
+
+div.card-left p{
+    padding-bottom: 100px;
+    color: #767676;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.card-left a{
+    background-color: #FF9302;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.card-left a:hover{
+    background-color: black;
+
+    transition: 0.4s ease-in-out;
+}
+
+/****************************** SKILLS ****************************** */
+
+.skills{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/front/vue-face-du-constructeur-masculin-uniforme-casque-jaune-mur-blanc.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.skills-column{
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 200px;
+    padding-top: 40px;
+}
+
+.skills-left{
+    padding-right: 150px;
+}
+
+.skills-column h4{
+    background-color: #FF9302;
+    text-align: center;
+    padding: 10px;
+    color:white;
+    font-weight: 300;
+}
+
+div.skills-column h4:hover{
+    background-color: black;
+
+    transition: 0.4s ease-in-out;
+}
+
+/****************************** CONTACT ****************************** */
+
+div.contact{
+    display: flex;
+    height: auto;
+    width: 100%;
+    
+}
+
+div.contact .iframe{
+    width: 50%;
+}
+
+div.contact .formulaire-contact{
+    width: 50%;
+}
+
+div.contact input, div.contact textarea{
+    width: 50%;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid #FF9302;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.contact .formulaire-contact button{
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+    cursor: pointer;
+    border: 1px solid #FF9302;
+    width: 53%;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.contact .formulaire-contact button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.2s ease-in-out;
+    border: 1px solid white;
+    cursor: pointer;
+}
+

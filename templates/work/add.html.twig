@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WorkController!{% endblock %}
+
+{% block body %}
+{{ form_start(form_chantier) }}
+{{ form_widget(form_chantier) }}
+<button type="submit">Confirmer</button>
+{{ form_end(form_chantier) }}
+
+{% endblock %}
